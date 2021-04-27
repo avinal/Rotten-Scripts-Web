@@ -1,0 +1,1455 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Amazon review scrapper &#8212; Rotten Scripts</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="canonical" href="https://HarshCasper.github.io/rotten-scripts/JavaScript/Amazon_Review_Scrapper/README.html" />
+    <link rel="shortcut icon" href="../../_static/banner.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Automate Tinder" href="../Automate_Tinder/README.html" />
+    <link rel="prev" title="JavaScript" href="../index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://HarshCasper.github.io/rotten-scripts/JavaScript/Amazon_Review_Scrapper/README.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Amazon review scrapper" />
+<meta property="og:description" content="Amazon review scrapper  checkout  A Script to scrape reviews from Amazon.  Setup  Clone the folder.  Open command line and change the directory to your folder b" />
+<meta property="og:image"       content="https://HarshCasper.github.io/rotten-scripts/_static/banner.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/banner.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Rotten Scripts</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p>
+ <span class="caption-text">
+  Rotten Scripts
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CONTRIBUTING.html">
+   Contributing Guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CONTRIBUTING.html#submitting-contributions">
+   Submitting Contributions👩‍💻👨‍💻
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CODE_OF_CONDUCT.html">
+   Contributor Covenant Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../TEMPLATE_README.html">
+   Package/Script Name
+  </a>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  Python Scripts
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Python/index.html">
+   What is Python?
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/ASCIIfy_Image/README.html">
+     ASCIIfy your image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/AWS_Scripts/README.html">
+     AWS Secrets Manager
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/AWS_Scripts/README.html#retrieve-the-secret-value">
+     Retrieve the secret value
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/All_GitHub_Repos/README.html">
+     GitHub Repository Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Amazon_Product_Price_Tracker/README.html">
+     Amazon Price Tracker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Audio_Converter/README.html">
+     Audio Converter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Audio_Format_Converter/README.html">
+     Audio_Format_Converter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Auto_Backup/README.html">
+     Automatic_Backup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Automate-LinkedIN/README.html">
+     Automate Linkedin
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Automate-Telegram/README.html">
+     Automate Telegram
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Automate_Commiting_Using_Git/README.html">
+     Automate commit using Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Base64_Encoder_Decoder/README.html">
+     BASE 64 Encoder Decoder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Battery_Full_Charged_Notifier/README.html">
+     Battery Full Charged Notifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Book_Downloader/README.html">
+     Book Download
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Bulk_Certificate_Generator/README.html">
+     Bulk Certificate Generator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/CRICBUZZ_scraper/README.html">
+     Cricbuzz scrapper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/CSV_Splitter/README.html">
+     CSV Splitter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Caesar_Cipher/README.html">
+     Caesar Cipher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Cartoonified_Image/README.html">
+     Cartoonified Image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Codechef_Contests/README.html">
+     Codechef Contests
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Codechef_Problem_Scrapper/README.html">
+     Codechef Problem Scrapper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Countdown_clock_and_Timer/README.html">
+     Countdown Clock and Timer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Counting_Days/README.html">
+     Counting Days
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Create_Word_Cloud/README.html">
+     Create a Word Cloud
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/CRICBUZZ_scraper/README.html">
+     Cricbuzz scrapper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/cryptocurrency_converter/README.html">
+     Crypto Currency Converter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Currency_Converter/README.html">
+     Currency Converter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Customized_blog_headers/README.html">
+     Customised Blog Headers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/DSC_Event_Scrapper/README.html">
+     Scrape events from Developer Students Clubs website
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Desktop_Time_Tracker/README.html">
+     Time Tracker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Desktop_notifier/README.html">
+     Desktop Notifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Discord_bot/README.html">
+     Discord Bot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Download_Instagram_Posts/README.html">
+     Download Instagram Posts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Download_Instagram_Videos/README.html">
+     Download Instagram Videos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Download_Mangas/README.html">
+     Download Mangas as PDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Duplicate_Image/README.html">
+     Duplicate Image Finder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Email_Scrape_From_Webpage/README.html">
+     Email Scrap from webpage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Encrypt_Text/README.html">
+     Encrypt Text
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Execution_time/README.html">
+     Execution time of task
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Extract_Image_Metadata/README.html">
+     Extract Image Metadata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Facebook_Auto_Post/README.html">
+     Facebook Auto Post
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Facts_Deskop_Notifier/README.html">
+     Facts Desktop Notifier (Reddit Version)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/File_Organiser/README.html">
+     File Organiser Script
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Find_All_Links/README.html">
+     Find all links
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Find_Tweet/README.html">
+     Find Tweet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Flask_Directory_Initiator/README.html">
+     Flask directory initiator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Frames_to_Video_converter/README.html">
+     Convert Frames to Video
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/GeeksForGeeks_Article_Downloader/README.html">
+     Save any article you like from GeeksForGeeks as a pdf
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Generate_Fake_Data/README.html">
+     Generate Fake Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Get_BBC_News/README.html">
+     Get BBC News
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Get_Current_Weather/README.html">
+     Get Current City Weather
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Get_Lyrics/README.html">
+     Get lyrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Git_Repo_Size_Contributors/README.html">
+     Git Repository Size and Contributors List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Github_Bomb_Issues/README.html">
+     Bomb Issues on a Github Repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Github_Traffic/README.html">
+     Github_Traffic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Google-News-Scrapper/README.html">
+     Google News Scrapper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Gradient_Mapping/README.html">
+     Gradient Mapping to an Image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/HTML_to_Markdown/README.html">
+     Python Script to convert HTML file to markdown(.md) format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/HackerNews_scrapper/README.html">
+     Hackernews Scrapper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Hash_The_File/README.html">
+     Hash-The-File
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Heat_Your_System/README.html">
+     Heat Your System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Human_Detector/README.html">
+     Human_Detector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/IMDB_scrapper/README.html">
+     IMDB Scrapper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/IMDb_Recommendation/README.html">
+     IMDb_Recommendation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/IMDb_Top_Movies/README.html">
+     Scrap Top Movies from IMDB
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Image_Encoder/README.html">
+     Image Encoder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Image_Sketch/README.html">
+     Image to Sketch
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Image_Steganography/README.html">
+     Image Steganography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Image_filters/README.html">
+     Image Filter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Image_flip_meme_templates/README.html">
+     Image Flip Meme Template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Image_to_Sepia/README.html">
+     Image to Sepia image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Initialize_HTTP_Server/README.html">
+     Initializing a HTTP Server(Web Server)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Instagram_Followers_Following_Scraper/README.html">
+     Instagram_Followers_Following_Scraper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Instagram_Followers_Following_Scraper/Using_BeautifulSoup/README.html">
+     Instagram Scraper using BeautifulSoup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Instagram_Followers_Following_Scraper/UsingSelenium/README.html">
+     Instagram User’s Followers and Following Scraper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Instagram_Profile_Pic_Downloader/README.html">
+     Instagram Profile Pic Downloader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Internshala_Scrapper/README.html">
+     Internshala Scraper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Invisible_Cloak/README.html">
+     Invisible Cloak
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/JSON_to_Excel/README.html">
+     JSON to Excel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/JSON_to_YAML/README.html">
+     JSON_to_YAML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Keylogger/README.html">
+     Keylogger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Labelling_Binarizer_Instance/README.html">
+     Labelling Binarizer Instance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Large_File_Identifier/README.html">
+     Large File Identifier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/launching_programs_from_python/README.html">
+     How to Launch Computer Programs Using Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Linkedin_Video_Downloader/README.html">
+     Linkedin Video Downloader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Linkedin_Video_Downloader/README.html#how-to-use">
+     How to use?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Linkedin_Video_Downloader/README.html#working-demo">
+     Working Demo
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Linkedin_post_emails_scrapper/README.html">
+     Linkedin Post Comments Email Scrapper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Lorem_Ipsum_Generator/README.html">
+     Lorem Ipsum Text Generator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Lyrics_Download/README.html">
+     Lyrics_Download
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Magic_Pen/README.html">
+     Magic-Pen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/markovmemes/README.html">
+     Markovmeme
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Mass_Email_Sender/README.html">
+     MassEmailSender
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Medium_article_downloader/README.html">
+     Medium Article Downloader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Meet_Strangers/README.html">
+     Meet Strangers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/mergetwopdf/Readme.html">
+     Merge two pdf Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Music_Genre_Classification/README.html">
+     Music_Genre_Classification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Net_Connection/README.html">
+     Net Connection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Network_scanner/README.html">
+     Network Scanner in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/OCR_To_Google_Question_Papers/README.html">
+     OCR to Google Question Papers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/PDF_Generator/README.html">
+     PDF Generator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/PDF_Tables_Extractor/README.html">
+     PDF tables extractor.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Pagespeed_API/README.html">
+     Pagespeed_API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Port_Scanner/README.html">
+     Open Port Scanner in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Ports_Scan/README.html">
+     Port_Scan
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Python_Library_Downloader/README.html">
+     Python Machine Learning and Data Science Library Downloader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Python_news_reader/README.html">
+     Python News Reader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/QR_code_generator/README.html">
+     QR Code Generator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Query_Links_Script/README.html">
+     Query_Links_Script
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Questions_from_Project_Euler/README.html">
+     Project Euler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Quora_Bookmark_Topics_Downloader/README.html">
+     Quora Bookmarked Topics Downloader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/ROT13/README.html">
+     ROT13
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/RSA_Key_Generation/README.html">
+     Generate Public Keys
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Random_Password_Generator/README.html">
+     Random password generator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Reddit_Wallpaper/README.html">
+     Download Reddit image and set it as Desktop Wallpaper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/S3_Bucket_Creator/README.html">
+     How do I create an S3 Bucket?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/S3_Bucket_Downloader/README.html">
+     S3 Bucket Downloader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Scrap_Restaurants_using_ZomatoAPI/README.html">
+     Scrap Resturants using the Zomato API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Scrape_Twitter/README.html">
+     Scrape Twitter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Screen_Grabber/README.html">
+     Screen Grabber
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Search_File/README.html">
+     Find your file any where in the system just by running this python script.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Send_Email_Using_Gmail_Api/README.html">
+     Getting Started With Google Api
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Send_Emails/README.html">
+     Send_Emails
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Send_SMS_Using_Twilio_In_Python/README.html">
+     Send SMS using Twilio in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Shutdown_Your_System/README.html">
+     Shutdown your System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Slideshare_slides_downloader/README.html">
+     Save the slides you like from Slideshare as a pdf
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Social_Media_Links/README.html">
+     Pagespeed_API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Song_Popularity/README.html">
+     Song Popularity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Speech_to_Text/README.html">
+     Speech To Text Converter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Speech_to_Text/README.html">
+     Speech To Text Converter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Sports_Score_Updates/README.html">
+     Get sports updates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Stock_Market_Data/README.html">
+     Get the data of your favorite stock with this script.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Story_Reader/README.html">
+     Audiobook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Strong_Password_Detection/README.html">
+     Strong Password Detection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Substitution_Cypher/README.html">
+     Substitution Cypher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Subtitle_Downloader/README.html">
+     Subtitle Downloader using Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/TSV_to_CSV/README.html">
+     TSV to CSV Converter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Table_To_CSV/README.html">
+     Table to CSV/EXCEL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Tags_Scraper/README.html">
+     Tags Scraper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Telegram_Bot/README.html">
+     Python-Telegram Bot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Test_Typing_Speed/README.html">
+     Test Typing Speed
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Text_Extract/README.html">
+     Text_Extract
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Text_To_Speech/README.html">
+     Convert text to speech
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Time_Conversion/README.html">
+     Get time in different timezones/ countries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Times_Of_India/README.html">
+     Times of India Scrapper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/ToonifyImage/README.html">
+     Toonify a Given Image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Torrent_To_GoogleDrive/README.html">
+     Torrent_to_Drive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Track_Data_Usage/README.html">
+     Track Data Usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Track_Data_Usage/README.html">
+     Track Data Usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Twitter_Bot/README.html">
+     Building a Twitter Bot with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/URL_Shortner/README.html">
+     Url Shortner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Upload_File_As_Github_Gist/README.html">
+     Uploading a file as a Gist using Python.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Valid_Phone_Number_Extractor/README.html">
+     Valid Phone Number extractor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Video_Steganography/README.html">
+     Video Steganography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Video_To_Frames/README.html">
+     Video to Frames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Video_Watermarker/README.html">
+     Video Watermarker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Vigenere_Cipher/README.html">
+     Get your Text Encrypted and Decrypted with this Script.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Watermark_it/README.html">
+     Watermark it
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Weather_using_OpenWeatherMap/README.html">
+     Weather_using_OpenWeatherMap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Website_Blocker/README.html">
+     Website Blocker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Website_Cloner/README.html">
+     Static Website Cloner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/WhatsApp_Message_Automation/README.html">
+     Automate-sending-WhatsApp-messages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Whatsapp_Sms_Bomber/README.html">
+     Whatsapp SMS Bomber App
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Who_Is_Online_On_WhatsApp/README.html">
+     Python Script to check who is Online on WhatsApp using Selenium
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Wifi_Speed_Tester/README.html">
+     Wifi Speed Tester
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Word_Meaning/README.html">
+     Get the meaning of a english word with this script
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/XML_To_CSV/README.html">
+     XML to CSV
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/YouTube_Video-Audio_Download/README.html">
+     YouTube Video-Audio Download
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Youtube_Bot/README.html">
+     Youtube Bot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Youtube_Video_Download/README.html">
+     Youtube Video Downloader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Zipper/README.html">
+     Zipper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Zoom_Automation/README.html">
+     Auto attend Zoom meets.
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  JavaScript
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../index.html">
+   JavaScript
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Amazon review scrapper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Automate_Tinder/README.html">
+     Automate Tinder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Base64_Encoder_Decoder/README.html">
+     JS Script to Encode and Decode BASE 64 String to utf-8 string and vice versa.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Blog_Image_Finder/README.html">
+     Script in JS used to get images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Brute_Force_Admin/README.html">
+     JS Script to brute force admin panels of a website
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Bulk_LinkedIn_requests/README.html">
+     Sending bulk LinkedIn Connection requests
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Citation_Text_Converter/README.html">
+     Citation Text Converter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cryptoprice/README.html">
+     CryptoCurrencies Price Using Coinbase API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Download_All_Repos/README.html">
+     Nodejs Script to Download all user Repositories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Edit_Webpage/README.html">
+     Edit Webpage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Extract_Comments/README.html">
+     Extracting Comments From source code in Nodejs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Follow_Instagram/README.html">
+     Follow Instagram
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../GitHub_Graph_Populator/README.html">
+     GitHub Graph Populator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Html_to_Markdown/README.html">
+     Script to convert html into markdown using javascript.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Instagram_Like/README.html">
+     Instagram Like
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ROT13/README.html">
+     ROT13
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../RSA_Key_Pair_Generator/README.html">
+     RSA Key Pair Generator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Send_Emails/README.html">
+     Send Emails
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Who_Don%27t_Follow_You/README.html">
+     Who Don’t Follow You
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  Go Scripts
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Go/index.html">
+   What is GoLang?
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Go/EC2_Launcher/README.html">
+     EC2 Launcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Go/GIF_Creator/README.html">
+     Video/Images to GIF converter in golang
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Go/Github_Repo_Issues/README.html">
+     Github-Repo-Issues
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Go/Github_UserName_Checker/README.html">
+     Github-UserName-Generator
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  Bash Scripts
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Bash/index.html">
+   What is Bash?
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Bash/Bookmarks_Keeper/README.html">
+     Bookmarks Keeper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Bash/Custom_Prompt/README.html">
+     Custom Command Prompt on Bash
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Bash/Desktop_Time_Tracker/README.html">
+     Desktop Time Tracker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Bash/Hunt_Username/README.html">
+     Hunt Username
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Bash/JSON_Parse_with_jq/README.html">
+     JSON parsing in bash
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Bash/Multiplexing/Empty-Subtitles/README.html">
+     Empty Subtitles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Bash/Multiplexing/No_Subtitles_MKV/README.html">
+     No Subtiles Matroska
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Bash/Ports_Scan/README.html">
+     Port_Scan
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Bash/Twitter_Bookmarks/README.html">
+     Twitter Bookmarks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Bash/URL_Scraper/README.html">
+     Extract URL(s) from a web page
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  PowerShell Scripts
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../PowerShell/index.html">
+   What is PowerShell?
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../PowerShell/Custom_Prompt/README.html">
+     Custom PowerShell Command Prompt
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p>
+ <span class="caption-text">
+  Open Source Events
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Open_Source_Events/index.html">
+   Open Source Events
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Open_Source_Events/CH20/README.html">
+     CONTRIBUTOR’s HACK 2020 (CH20)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Open_Source_Events/KWOC/README.html">
+     Kharagpur Winter of Code 2020
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Open_Source_Events/NWOC/README.html">
+     NJACK Winter of Code 2020
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Open_Source_Events/PSoC/README.html">
+     PClub Summer of Code (PSoC)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Open_Source_Events/SCI/README.html">
+     STUDENT CODE-IN (SCI)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Open_Source_Events/SLoP/README.html">
+     Semester Long Projects (SLoP)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Open_Source_Events/SWOC/README.html">
+     SCRIPT WINTER OF CODE (SWOC)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Open_Source_Events/DWOC/README.html">
+     DevScript Winter of Code (DWOC)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/JavaScript/Amazon_Review_Scrapper/README.rst"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/HarshCasper/Rotten-Scripts"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/HarshCasper/Rotten-Scripts/issues/new?title=Issue%20on%20page%20%2FJavaScript/Amazon_Review_Scrapper/README.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/HarshCasper/Rotten-Scripts/edit/master/JavaScript/Amazon_Review_Scrapper/README.rst"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#output">
+   Output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#author-s">
+   Author(s)
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="amazon-review-scrapper">
+<h1>Amazon review scrapper<a class="headerlink" href="#amazon-review-scrapper" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/HarshCasper/Rotten-Scripts/tree/master/JavaScript/Amazon_Review_Scrapper/"><img alt="checkout" src="https://forthebadge.com/images/badges/check-it-out.svg" /></a></p>
+<p>A Script to scrape reviews from Amazon.</p>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Clone the folder.</p></li>
+<li><p>Open command line and change the directory to your folder by using <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">foldername</span></code>.</p></li>
+<li><p>Run the command <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code>.</p></li>
+<li><p>If you still get module import error, you can use the command to install missing package <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">package-name</span></code>.</p></li>
+<li><p>Then run the script using command <code class="docutils literal notranslate"><span class="pre">node</span> <span class="pre">script.js</span></code>.</p></li>
+</ol>
+</section>
+<section id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<figure class="align-default">
+<img alt="output-img" src="https://github.com/SANKET7738/random/blob/master/amazon_reviews_scrapper/output-img/output.png" />
+</figure>
+</section>
+<section id="author-s">
+<h2>Author(s)<a class="headerlink" href="#author-s" title="Permalink to this headline">¶</a></h2>
+<p>Made by <a class="reference external" href="https://github.com/SANKET7738">SANKET MHATRE</a>.</p>
+</section>
+</section>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">JavaScript</a>
+    <a class='right-next' id="next-link" href="../Automate_Tinder/README.html" title="next page">Automate Tinder</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Avinal Kumar<br/>
+        
+            &copy; Copyright 2021, Harsh Bardhan Sharma.<br/>
+          Last updated on Apr 27, 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
