@@ -1,4 +1,4 @@
-**Note: This is a detached fork of the original Rotten-Script Project, no longer syncing with the upstream. This fork was developed as a website for the proejct. Check it here: https://avinal.space/Rotten-Scripts-Web/**
+**Note: This is a detached fork of the original Rotten-Script Project, no longer syncing with the upstream. This fork was developed as a website for the project. Check it here: https://avinal.space/Rotten-Scripts-Web/**
 
 
 # Rotten Scripts
